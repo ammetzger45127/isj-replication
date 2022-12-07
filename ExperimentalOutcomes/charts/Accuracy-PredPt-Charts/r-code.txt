@@ -1,0 +1,19 @@
+d=read.csv2("traffic.csv")
+
+d=read.csv2("bpic17.csv")
+
+
+df<-data.frame(d$prefLen,d$relNr,d$accLSTM,d$accRF)
+
+ggplot(df) + 
+ geom_bar(aes(d$prefLen,d$relNr), stat="identity", fill="lightgrey") +
+ geom_line(aes(d$prefLen,d$accLSTM), color="red", size = 1.3, group=1) +
+ geom_line(aes(d$prefLen,d$accRF), color="blue", size = 1.3, group=1) +
+ xlab("Prefix Length")+ ylab("") + ylim(0,1) +
+theme(panel.grid.major = element_line(color = "grey", size = 0.5, linetype = 2), 
+      panel.grid = element_line(color = "white", size = 0.75, linetype = 2),
+      panel.background = element_rect(fill = "white", colour = "white", size = 0.5, linetype = "solid"),
+      axis.line = element_line(colour = "black"))
+
+
+

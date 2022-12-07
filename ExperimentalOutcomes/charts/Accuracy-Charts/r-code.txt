@@ -1,0 +1,3 @@
+\textwidth = 12.4 cm in ISJ
+
+dev.new(width=6, height=8, unit="cm"); plot (d$n, d$mae, col = "red", ylab = "", xlab="Case", bty="l", tcl = .3, mgp = c(1.3, .2, 0), pch=".", ylim = c(0,1)); lines(d$n, d$mae, col = "red", xlab="Case", bty="l", tcl = .3, mgp = c(1.3, .2, 0), pch="."); grid(lty = 2, col = "gray", lwd = 1)

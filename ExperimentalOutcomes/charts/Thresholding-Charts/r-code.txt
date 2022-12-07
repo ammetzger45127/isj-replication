@@ -1,0 +1,11 @@
+## Learning Metrics
+d=read.csv2("curves.csv")
+dev.new(width=15, height=7, unit="cm"); plot (d$caseID, d$earliness, col = "blue", xlab="Case", ylab="", bty="l", tcl = .3, mgp = c(1.3, .2, 0), pch=".",   ylim = c(-1,1.2)); grid(lty = 2, col = "gray", lwd = 1); lines(d$caseID, d$earliness, col = "blue");
+lines(d$caseID, d$avg_true_alarms, col = "green"); lines(d$caseID, d$avg_alarms, col = "black"); 
+
+
+
+
+## MAE Charts
+plot (d$n, d$mae, col = "blue", xlab="Case", ylab="MAE", bty="l", tcl = .3, mgp = c(1.3, .2, 0), pch=".", ylim = c(0,.9))
+lines(d$n, d$mae, col = "blue", xlab="Case", ylab="MAE", bty="l", tcl = .3, mgp = c(1.3, .2, 0), pch=".")

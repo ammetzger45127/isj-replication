@@ -1,0 +1,19 @@
+## Learning Metrics
+dev.new(width=15, height=7, unit="cm"); plot (d$case_id, d$rewards_avg, col = "red", xlab="Case", ylab="", bty="l", tcl = .3, mgp = c(1.3, .2, 0), pch=".",  
+xlim = c(538, max(d$case_id)), ylim = c(-1,1.2)); lines(d$case_id, d$rewards_avg, col = "red");
+lines(d$case_id, d$earliness_avg, col = "blue"); lines(d$case_id, d$true_avg_100, col = "green"); lines(d$case_id, d$adaption_rate_avg, col = "black"); grid(lty = 2, col = "gray", lwd = 1)
+
+
+
+
+## MAE Charts
+plot (d$n, d$mae, col = "blue", xlab="Case", ylab="MAE", bty="l", tcl = .3, mgp = c(1.3, .2, 0), pch=".", ylim = c(0,.9))
+lines(d$n, d$mae, col = "blue", xlab="Case", ylab="MAE", bty="l", tcl = .3, mgp = c(1.3, .2, 0), pch=".")
+
+
+## Convergence Charts
+dev.new(width=7, height=7, unit="cm"); plot (d$case_id, d$rewards_avg, col = "red", xlab="Case", ylab="", bty="l", tcl = .3, mgp = c(1.3, .2, 0), pch=".",  
+xlim = c(100, 538), ylim = c(-1,1.2)); lines(d$case_id, d$rewards_avg, col = "red");
+lines(d$case_id, d$earliness_avg, col = "blue"); lines(d$case_id, d$true_avg_100, col = "green"); lines(d$case_id, d$adaption_rate_avg, col = "black"); grid(lty = 2, col = "gray", lwd = 1)
+
+
